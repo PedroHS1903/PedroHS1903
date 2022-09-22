@@ -1,0 +1,118 @@
+#include <stdio.h> <stdlib.h>
+
+int main() {
+
+  // Dados do aluno
+  
+printf("Nome: Pedro Henrique dos Santos Soares\n");
+printf("Curso: Analise e Desenvolvimento de Sistemas\n");
+printf("Matricula: 202222370\n");
+printf("Instituicao: Universidade LaSalle\n\n");
+printf("Ola, este programa tem como objetivo fazer calculos aritmeticos simples.\n\nPara isso, preciso de sua interacao\n\n");
+  
+    //variaveis
+float soma, divi, multi, sub, pot1, pot2, r1, r2, n1, n2;
+int x1, x2, x3;
+
+   //criando laço de repetição
+  
+ do {
+
+   //Entrada de dados
+ printf("Digite um numero: ");
+  scanf("%f", &n1);
+ printf("Digite outro numero: ");
+  scanf("%f", &n2);
+ printf("\n");
+
+
+   
+    printf("\nCerto, temos duas opcoes abaixo:\n\n ");
+   
+      printf("1) Raiz Quadrada  2) Exprecoes basicas\n\n ");
+        printf("Qual  sua escolha? ");
+       scanf("%d", &x1);
+      printf("\n");        
+    
+    //Atribuindo valores
+    r1 = sqrt(n1);
+    r2 = sqrt(n2);
+
+
+   
+    //Condiçao   
+
+    switch (x1) {
+   
+     case 1:
+    printf("A raiz quadrada do primeiro valor: %.2lf\n", r1);  
+    printf("A raiz quadrada do primeiro valor: %.2lf\n", r2);
+     break;  
+
+      default:
+      printf("OPCAO INVALIDA!\n\n");
+      break;
+      
+      case 2:
+      printf("escolha uma das opcoes abaixo: \n\n");      
+      
+       
+      printf("1) Adicao\n");
+      printf("2) Subtracao\n");
+      printf("3) Multiplicacao\n");
+      printf("4) Divisao\n");
+      printf("5) Potenciacao\n");
+      printf("\n");
+      printf("Qual operacao deseja realizar? ");
+      scanf("%d", &x2);
+      printf("\n");
+      }
+    
+  // Atribuindo valores 
+  soma = n1 + n2;
+  sub = n1 - n2;
+  divi = n1 / n2;
+  multi = n1 * n2;
+  pot1 = pow(n1, 2);
+  pot2 = pow(n2, 2); 
+   
+  //Condição
+  switch(x2) {
+  
+    case 1:
+    printf("O valor da adição é: %.2f\n", soma);
+    break;
+
+    case 2:
+    printf("O valor da subtração é: %.2f\n", sub);
+    break;
+
+    case 3:
+    printf("O valor da multiplicação é: %.2f\n", multi);
+    break;
+
+    case 4:
+    printf("O valor da divisão é: %.2f\n", divi);
+    break;
+
+    case 5:
+    printf("O valor da potenciacao do primeiro valor e: %.2f\n", pot1);
+    printf("O valor da potenciacao do segundo valor e: %.2f\n", pot2);
+
+  }
+      
+               
+        
+  printf("\n");
+  printf("Digite 1 para reiniciar ou qualquer tecla para finalizar: ");   
+   scanf("%d", &x3);
+   printf("\n");
+      
+      }  while (x3 == 1);
+  
+  //finalizando
+printf("\n");
+printf("Obrigado. Até a proxima!");
+  
+  return 0;
+}
